@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+  <input style="width: 600px;height: 60px; font-size: 30px;" id="go" type="text" value="100" placeholder="请输入">
+  <!-- <input id="Confirm" type="button" value="确认"> -->
+  <p id="box" style="border: 1px solid blue; width: 500px;height: 60px;line-height: 60px;"></p>
+  <div id="two"></div>
+  <script>  
+  // let two =  document.querySelector('#two');
+  // let Input = document.createElement('button');
+  // Input.setAttribute("value", "展开");
+  // Input.innerHTML=展开;
+  // two.appendChild(Input);
+
+  let one = $('<button></button>').text('确认');
+  $('#two').append(one)
+  console.log(one)
+  console.log($('two'))
+
+    // let obj1 = {
+    //   x: 100
+    // };
+    // let obj2 = {
+    //   y: 100
+    // }
+    // Object.defineProperty(obj2, 'x', {
+    //   get() {
+    //     console.log('有人读取了x数据')
+    //     return obj1.x
+    //   },
+    //   set(value) {
+    //     console.log('有人修改了数据', value)
+    //     obj1.x = value
+    //   }
+    // })
+    // let Confirm = document.querySelector('#Confirm');
+    // let go = document.querySelector('#go');
+    // let box = document.querySelector('#box');
+    // // 注册回车键事件
+    // go.addEventListener('keyup', function (event) {
+    //   if (event.keyCode == "13") {
+    //     obj2.x = go.value
+    //     box.innerHTML = obj1.x}
+    //   }else{
+    //  // 当输入框失去焦点时
+    //   go.onblur = function(){
+    //   obj2.x = go.value
+    //   box.innerHTML = obj1.x
+    // }}
+    // });
+    // Confirm.onclick = function(){
+    //   obj2.x = go.value
+    //     box.innerHTML = obj1.x
+    // }
+  </script>
+  <!-- <script>
+    window.onbeforeunload = function (e) {
+      var e = window.event || e;
+      e.returnValue = ("确定离开当前页面吗？");
+    }
+  </script> -->
+</body >
+</html>
