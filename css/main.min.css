@@ -75,7 +75,7 @@
 a:hover {
     transition: all .3s;
     color: #000;
-    background-color: #66666644
+    background-color: #706f6f44;
 }
 
 @media screen and (max-width:480px) {
