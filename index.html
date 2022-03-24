@@ -35,11 +35,16 @@
         <div style="width: 100%;"></div>
         <nav>
             <ul>
+<<<<<<< HEAD
                 <li><a class="Tip" href="./home.html" target="_blank"><i class="fas fa-home"></i>home</a></li>
                 <li>
                     <a class="Tip" href="https://www.yuque.com/lituoto" target="_blank"><i style="padding-top: 5px;"
                             class="fab fa-earlybirds"></i>yuque</a>
                 </li>
+=======
+                <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-list-alt"></i>home</a></li>
+                <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-heart"></i>code</a></li>
+>>>>>>> ac6ecdf0c38c83b02f0f9dba234a1b43c9161069
                 <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-rss-square"></i>Blog</a></li>
                 <li><a class="Tip" id="Email" href="maito:suplzy@gmail.com?subject='主题内容'&body='邮件内容'" target="_blank"><i class="fa fa-envelope"></i>Email</a></li>
                 <li><a class="Tip" href="https://github.com/Mcouple?tab=repositories" target="_blank"><i
@@ -61,6 +66,7 @@
 <script id="fs" type="x-shader/x-fragment">uniform sampler2D map; uniform vec3 fogColor; uniform float fogNear; uniform float fogFar; varying vec2 vUv; void main() { float depth = gl_FragCoord.z / gl_FragCoord.w; float fogFactor = smoothstep(fogNear, fogFar, depth); gl_FragColor = texture2D(map,
     vUv); gl_FragColor.w *= pow(gl_FragCoord.z, 20.0); gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor);}</script>
 <script src="./js/main.min.js"></script>
+<<<<<<< HEAD
 <script>
     document.onkeydown = function(event) {
         if (event.keyCode == 123) {
@@ -76,3 +82,5 @@
         return false;
     }
 </script>
+=======
+>>>>>>> ac6ecdf0c38c83b02f0f9dba234a1b43c9161069
