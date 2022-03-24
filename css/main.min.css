@@ -429,3 +429,15 @@ nav.use-middle:after {
 nav.use-middle ul li.is-middle {
     border-left: 0
 }
+
+.box-shadow {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(133, 133, 133, 0.2);
+    display: block;
+    margin: 0 auto;
+    -webkit-box-shadow: 1px 1px 1px rgb(0 0 0 / 10%), 1px 1px 1px rgb(0 0 0 / 10%), 1px 1px 1px rgb(0 0 0 / 10%);
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 10%), 1px 1px 1px rgb(0 0 0 / 10%), 1px 1px 1px rgb(0 0 0 / 10%);
+}
