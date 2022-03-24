@@ -20,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
 
-<body>
+<body oncontextmenu="doNothing()">
     <div class="wrapper">
         <div class="boxavatar"><img class="avater" alt="Mcouple" src="./img/icon.jpg"></img>
         </div>
@@ -35,10 +35,13 @@
         <div style="width: 100%;"></div>
         <nav>
             <ul>
-                <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-list-alt"></i>home</a></li>
-                <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-heart"></i>Love</a></li>
+                <li><a class="Tip" href="./home.html" target="_blank"><i class="fas fa-home"></i>home</a></li>
+                <li>
+                    <a class="Tip" href="https://www.yuque.com/lituoto" target="_blank"><i style="padding-top: 5px;"
+                            class="fab fa-earlybirds"></i>yuque</a>
+                </li>
                 <li><a class="Tip" href="./home.html" target="_blank"><i class="fa fa-rss-square"></i>Blog</a></li>
-                <li><a class="Tip" id="Email" href="" target="_blank"><i class="fa fa-envelope"></i>Email</a></li>
+                <li><a class="Tip" id="Email" href="maito:suplzy@gmail.com?subject='主题内容'&body='邮件内容'" target="_blank"><i class="fa fa-envelope"></i>Email</a></li>
                 <li><a class="Tip" href="https://github.com/Mcouple?tab=repositories" target="_blank"><i
                             class="fa_ fa-github"></i>Github</a></li>
             </ul>
@@ -53,8 +56,23 @@
 <script type="text/javascript" src="./js/ThreeExtras.min.js"></script>
 <script type="text/javascript" src="./js/Detector.min.js"></script>
 <script type="text/javascript" src="./js/RequestAnimationFrame.min.js"></script>
-<script src="./js/love.min.js"></script>
+<script src="./js/cursor.min.js"></script>
 <script id="vs" type="x-shader/x-vertex">varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }</script>
 <script id="fs" type="x-shader/x-fragment">uniform sampler2D map; uniform vec3 fogColor; uniform float fogNear; uniform float fogFar; varying vec2 vUv; void main() { float depth = gl_FragCoord.z / gl_FragCoord.w; float fogFactor = smoothstep(fogNear, fogFar, depth); gl_FragColor = texture2D(map,
     vUv); gl_FragColor.w *= pow(gl_FragCoord.z, 20.0); gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor);}</script>
 <script src="./js/main.min.js"></script>
+<script>
+    document.onkeydown = function(event) {
+        if (event.keyCode == 123) {
+            return false;
+        }
+        window.onhelp = function() {
+            return false;
+        }
+    }
+
+    function doNothing() {
+        window.event.returnValue = false;
+        return false;
+    }
+</script>
