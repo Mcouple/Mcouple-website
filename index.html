@@ -48,9 +48,25 @@
                             class="fa_ fa-github"></i>Github</a></li>
             </ul>
         </nav>
-    </div><span class="copyright">© 2021 - <span id="my-date">
-            <script>var date = new Date; nowYear = date.getFullYear().toString(), document.write(nowYear); var typed = new Typed("#description", { strings: [document.getElementById("description").innerHTML], startDelay: 100, typeSpeed: 200, loop: !0, backSpeed: 100, showCursor: !1 })</script>
+    </div>
+    <span class="copyright">© 2021 -
+        <span id="my-date">
+            <script>
+                var date = new Date;
+                nowYear = date.getFullYear().toString(), document.write(nowYear);
+                var typed = new Typed("#description", {
+                    strings: [document.getElementById("description").innerHTML],
+                    startDelay: 100,
+                    typeSpeed: 200,
+                    loop: !0,
+                    backSpeed: 100,
+                    showCursor: !1
+                })
+            </script>
             <span>&nbsp;www.suplzy.top</span>
+    </span>
+    </span>
+
 </body>
 
 </html>
@@ -59,9 +75,13 @@
 <script type="text/javascript" src="./js/Detector.min.js"></script>
 <script type="text/javascript" src="./js/RequestAnimationFrame.min.js"></script>
 <script src="./js/cursor.min.js"></script>
-<script id="vs" type="x-shader/x-vertex">varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }</script>
-<script id="fs" type="x-shader/x-fragment">uniform sampler2D map; uniform vec3 fogColor; uniform float fogNear; uniform float fogFar; varying vec2 vUv; void main() { float depth = gl_FragCoord.z / gl_FragCoord.w; float fogFactor = smoothstep(fogNear, fogFar, depth); gl_FragColor = texture2D(map,
-    vUv); gl_FragColor.w *= pow(gl_FragCoord.z, 20.0); gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor);}</script>
+<script id="vs" type="x-shader/x-vertex">
+    varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }
+</script>
+<script id="fs" type="x-shader/x-fragment">
+    uniform sampler2D map; uniform vec3 fogColor; uniform float fogNear; uniform float fogFar; varying vec2 vUv; void main() { float depth = gl_FragCoord.z / gl_FragCoord.w; float fogFactor = smoothstep(fogNear, fogFar, depth); gl_FragColor = texture2D(map,vUv);
+    gl_FragColor.w *= pow(gl_FragCoord.z, 20.0); gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor); }
+</script>
 <script src="./js/main.min.js"></script>
 <script>
     document.onkeydown = function(event) {
@@ -72,7 +92,6 @@
             return false;
         }
     }
-
     document.oncontextmenu = new Function('event.returnValue=false;');
     document.onselectstart = new Function('event.returnValue=false;');
 </script>
