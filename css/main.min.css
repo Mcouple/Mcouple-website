@@ -85,7 +85,8 @@ a:hover {
         -ms-flex-direction: column;
         flex-direction: column;
         min-width: 8rem;
-        max-width: 100%
+        max-width: 100%;
+        padding: 0px;
     }
     nav ul li {
         border-left: 0
